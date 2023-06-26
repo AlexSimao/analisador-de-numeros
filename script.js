@@ -21,7 +21,7 @@ function adicionar(){
 }
 
 function analisar(){
-    if (txtnum.value.length == 0 ){
+    if (sel.innerText == ""){
         alert('Adicione valores antes de analisar.')
     } else{
         saida.innerText = ""
