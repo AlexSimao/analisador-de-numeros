@@ -25,10 +25,13 @@ function analisar(){
         alert('Adicione valores antes de analisar.')
     } else{
         saida.innerText = ""
+        var paragrafo = []
+        
         for (let c = 1; c <= 5; c++){
             let new_p = document.createElement('p')
             new_p.setAttribute("id", `p${c}`)
             saida.appendChild(new_p)
+            paragrafo.push(document.getElementById(`p${c}`))
         }
     
         function somar(){
@@ -38,18 +41,12 @@ function analisar(){
             }
             return soma
         }
-        
-        let p1 = document.getElementById(`p1`)
-        let p2 = document.getElementById(`p2`)
-        let p3 = document.getElementById(`p3`)
-        let p4 = document.getElementById(`p4`)
-        let p5 = document.getElementById(`p5`)
     
-        p1.appendChild(document.createTextNode(`No total tem ${tab.length} números adicioados.`))
-        p2.appendChild(document.createTextNode(`O maior valor adicionado foi ${tab[tab.length-1]}`))
-        p3.appendChild(document.createTextNode(`O menor valor adicionado foi ${tab[0]}`))
-        p4.appendChild(document.createTextNode(`Somando todos os valores tem ${somar()}`))
-        p5.appendChild(document.createTextNode(`A media desses valores é ${somar() / (tab.length)}`))
+        paragrafo[0].appendChild(document.createTextNode(`No total tem ${tab.length} números adicioados.`))
+        paragrafo[1].appendChild(document.createTextNode(`O maior valor adicionado foi ${tab[tab.length-1]}`))
+        paragrafo[2].appendChild(document.createTextNode(`O menor valor adicionado foi ${tab[0]}`))
+        paragrafo[3].appendChild(document.createTextNode(`Somando todos os valores tem ${somar()}`))
+        paragrafo[4].appendChild(document.createTextNode(`A media desses valores é ${somar() / (tab.length)}`))
     }
 }
 
