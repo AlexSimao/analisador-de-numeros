@@ -7,7 +7,6 @@ var tab = []
 function adicionar(){
     if (txtnum.value.length == 0 || txtnum.value < 1 || txtnum.value > 100 || tab.indexOf(Number(txtnum.value)) != -1){
         alert('[ERRO] Valor invalido ou ja adicionado.')
-
     } else{
         saida.innerText = ""
         let num = Number(txtnum.value)        
@@ -16,8 +15,9 @@ function adicionar(){
         sel.appendChild(new_opt)
         tab.push(num)
         tab.sort()
-        txtnum.value = ""
     }
+    txtnum.value = ""
+    txtnum.focus()
 }
 
 function analisar(){
