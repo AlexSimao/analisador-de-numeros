@@ -21,7 +21,7 @@ function adicionar(){
 }
 
 function analisar(){
-    if (sel.innerText == ""){
+    if (tab.length == 0){
         alert('Adicione valores antes de analisar.')
     } else{
         saida.innerText = ""
